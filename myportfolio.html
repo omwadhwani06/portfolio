@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Wadhwani | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(ellipse at bottom, #0d1b3d 0%, #000 100%);
+      overflow-x: hidden;
+      color: white;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://grainy-gradients.vercel.app/noise.svg');
+      opacity: 0.05;
+      z-index: 0;
+    }
+    header, section {
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      background-color: #12193d;
+      padding: 20px;
+      text-align: center;
+      border: 2px solid transparent;
+      
+    }
+    h1, h2 {
+      margin: 0 0 10px 0;
+    }
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #1e2b57;
+      border: 2px solid transparent;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      background-color: #1c244a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #365eff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2a4dd6;
+    }
+    .glow-border {
+      border: 2px solid transparent;
+      transition: border 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <header class="glow-border">
+    <h1>Om Wadhwani</h1>
+    <p>Aspiring Web Developer | AI Enthusiast</p>
+  </header>  <section class="glow-border">
+    <h2>About Me</h2>
+    <p>Currently pursuing diploma in Computer Science. Passionate about web development, AI tools, and building useful software.</p>
+  </section>  <section class="glow-border">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript And Learning Backend Also </li>
+      <li>Python,java,c,c++ (Basics)</li>
+      <li>AI Tools like ChatGPT And More According To Work</li>
+      <li>Video Editing (Basic) like in mobile using capcut</li>
+    </ul>
+
+    <h2>🚀 Join My Creative Collaboration Group!</h2>
+<p>
+  I'm building a space where <strong>creators, developers, and innovators</strong> come together to:
+</p>
+<ul>
+  <li>🤝 Help each other with real-world <strong>projects</strong></li>
+  <li>💡 Share <strong>unique ideas</strong> and creative solutions</li>
+  <li>🔧 Collaborate, learn, and <strong>grow as a team</strong></li>
+</ul>
+<p>
+  Whether you're a beginner or experienced, if you're <strong>passionate about building something great</strong>, you're invited to be part of this exciting journey.
+</p>
+<blockquote>
+  💬 <strong>Let’s connect, create, and make an impact — together!</strong>
+</blockquote>
+<p>
+  📩 <strong>Reach out to join the group!</strong>
+</p>
+
+  </section>  <section class="glow-border">
+    <h2>Contact Me</h2>
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Your name" required />
+      <label>Email</label>
+      <input type="email" placeholder="Your email" required />
+      <label>Message</label>
+      <textarea placeholder="Your message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>  <script>
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      document.querySelectorAll('.glow-border').forEach(el => {
+        el.style.borderImage = `radial-gradient(circle at ${x}px ${y}px, #ffffff66, transparent 60%) 1`;
+      });
+    });
+  </script></body>
+</html>
