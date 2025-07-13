@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+      text-transform: capitalize;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #1f1f2e;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #92822a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #ffd700;
+    }
+
+    .typing {
+      width: 22ch;
+      overflow: hidden;
+      border-right: 2px solid #ffd700;
+      white-space: nowrap;
+      animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
+      margin: 10px auto 0;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #ffd700;
+      color: #ffd700;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      background: #ffd700;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+
+    main {
+      display: flex;
+      gap: 40px;
+      padding: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    main img {
+      height: 400px;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    main img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+    }
+
+    .main {
+      flex: 1;
+    }
+
+    .about, .achivements, .contact, .projects {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    p, li, span, a {
+      color: #e0e0e0;
+    }
+
+    .contact span {
+      margin-right: 20px;
+    }
+
+    .contact a {
+      color: #87cefa;
+      text-decoration: none;
+      scroll-behavior: smooth;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+      scroll-behavior: smooth;
+    }
+
+    footer p {
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 22ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    [data-animate].in-view {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>minigodplaysss...</h1>
+    <nav>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#achivement">achievements</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm OM WADHWANI</h1>
+    <p class="typing">Web Developer | Gamer | Streamer</p>
+    <a href="#about" class="cta">Know More</a>
+  </section>
+
+  <main>
+    <img src="minigod.jpg" alt="Minigod Profile">
+    <section class="main">
+      <div class="about" id="about" data-animate>
+        <h2>About Me</h2>
+        <p>I'm a web development intern and a diploma final year student in Computer Technology. I love building websites, learning new AI tools, and creating content online!</p>
+      </div>
+
+      <div class="achivements" id="achivement" data-animate>
+        <h2>Achievements</h2>
+        <ul>
+          <li>BGIS Overall MVP</li>
+          <li>Top 5 Fraggers - BGMI</li>
+          <li>100k+ YouTube Subscribers</li>
+          <li>just kidinggggg heheeeee </li>
+
+        </ul>
+      </div>
+
+      <div class="projects" id="projects" data-animate>
+        <h2>My Projects</h2>
+        <div class="project-card">Spotify Clone</div>
+        <div class="project-card">Portfolio Website</div>
+        <div class="project-card">Task Manager App</div>
+      </div>
+
+      <div class="contact" id="contact" data-animate>
+        <h2>Connect with Me</h2>
+        <span><a href="https://x.com/OMWADHWANI0066" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></span>
+        <span><a href="https://www.instagram.com/ig_om07" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved, minigodplaysss</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('[data-animate]').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('in-view');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
